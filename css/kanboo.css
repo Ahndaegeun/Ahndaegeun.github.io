@@ -1,0 +1,25 @@
+main {
+  display: flex;
+  height: 100vh;
+}
+
+section {
+  width: 45%;
+  height: 100%;
+  border: 1px solid #999;
+}
+
+nav {
+  width: 10%;
+  padding: 10px;
+}
+
+.code-wrap {
+}
+
+.preview-wrap {
+}
+
+.CodeMirror {
+  height: 100%;
+}

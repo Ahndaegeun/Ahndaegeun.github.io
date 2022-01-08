@@ -5,8 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../codemirror-5.65.0/lib/codemirror.css">
+  <link rel="stylesheet" href="../css/kanboo.css">
 </head>
 <body>
+  <main>
+
+    <nav>
+      <ul>
+        <li>File Name</li>
+        <li class="compiler-file">Compiler.java</li>
+      </ul>
+    </nav>
+    
+    <section class="code-wrap">
+      <textarea class="code">sdfsd</textarea>
+    </section>
+    
+    <section class="preview-wrap">
+      
+    </section>
+    
+  </main>
   
+  
+  <script type="text/javascript" src="../codemirror-5.65.0/lib/codemirror.js"></script>
+  <script src="../storage/json/kanboo.js"></script>
+  <script>
+    const code = document.querySelector(".code")
+    code.innerHTML = kanboo.compiler
+    const editor = CodeMirror.fromTextArea(code, {
+      lineNumbers : true
+    })
+
+  </script>
 </body>
 </html>
