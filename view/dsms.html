@@ -31,7 +31,6 @@
       <img src="../storage/images/dsms_img/15.png" alt="preview" class="show-img">
       <img src="../storage/images/dsms_img/16.png" alt="preview" class="show-img">
       <img src="../storage/images/dsms_img/17.png" alt="preview" class="show-img">
-      <img src="../storage/images/dsms_img/18.png" alt="preview" class="show-img">
       <button class="next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
     </div>
 
@@ -65,7 +64,7 @@ const movePrevImg = e => {
     if(ele.classList.contains("top-img")) {
       let position = i - 1
       if(position < 0) {
-        position = 17
+        position = 16
       }
       prevImg = imgs[position]
     }
@@ -80,7 +79,7 @@ const moveNextImg = e => {
     const ele = imgs[i]
     if(ele.classList.contains("top-img")) {
       let position = i + 1
-      if(position > 17) {
+      if(position > 16) {
         position = 0
       }
       nextImg = imgs[position]
