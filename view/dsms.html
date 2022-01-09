@@ -4,9 +4,98 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DSMS</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/kanboo.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  
+  <main>
+
+    <div class="img-wrap">
+      <button class="prev-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      <img src="../storage/images/dsms_img/1.png" alt="preview" class="show-img top-img">
+      <img src="../storage/images/dsms_img/2.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/3.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/4.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/5.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/6.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/7.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/8.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/9.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/10.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/11.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/12.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/13.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/14.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/15.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/16.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/17.png" alt="preview" class="show-img">
+      <img src="../storage/images/dsms_img/18.png" alt="preview" class="show-img">
+      <button class="next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="impression">
+      <ul>
+        <li>역할</li>
+        <li>PL(Project Leader)</li>
+        <li>소감</li>
+        <li>
+          처음은 항상 어렵고 두렵지만 그 다음부터는 어려움과 두려움이 반감된다고 생각합니다.
+          기획부터 설계 마무리단계까지 많은 고민을 하게 해준 프로젝트였고 웹의 흐름을 조금 더 이해하게 해준 프로젝트이며
+          팀원들과 어떤 방향으로 협업을 해야하는지 많이 배운 프로젝트 입니다.
+          프로젝트가 진행되면서 시간의 압박과 잘 따라오지 못하는 팀원의 케어등이 많이 힘들었지만 이로 인해 팀 프로젝트를 할때는
+          전반적인 상황과 자신의 능력을 과대 평가하지 않아야 하며 시간 배분을 잘 해야됨을 느낀 프로젝트였습니다.
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+
+<script>
+const imgs = document.querySelectorAll(".show-img")
+const prevBtn = document.querySelector(".prev-btn")
+const nextBtn = document.querySelector(".next-btn")
+
+const movePrevImg = e => {
+  let prevImg
+  for(i = 0; i < imgs.length; i++) {
+    const ele = imgs[i]
+    if(ele.classList.contains("top-img")) {
+      let position = i - 1
+      if(position < 0) {
+        position = 17
+      }
+      prevImg = imgs[position]
+    }
+    ele.classList.remove("top-img")
+  }
+  prevImg.classList.add("top-img")
+}
+
+const moveNextImg = e => {
+  let nextImg
+  for(i = 0; i < imgs.length; i++) {
+    const ele = imgs[i]
+    if(ele.classList.contains("top-img")) {
+      let position = i + 1
+      if(position > 17) {
+        position = 0
+      }
+      nextImg = imgs[position]
+    }
+    ele.classList.remove("top-img")
+  }
+  nextImg.classList.add("top-img")
+}
+
+prevBtn.addEventListener("click", e => {
+  movePrevImg(e)
+})
+nextBtn.addEventListener("click", e => {
+  moveNextImg(e)
+})
+</script>
 </body>
 </html>

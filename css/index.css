@@ -336,6 +336,18 @@ main > section {
   color: #769FCD;
 }
 
+.my-position {
+  margin-bottom: 10px;
+}
+
+.color {
+  color: #ff000090;
+}
+
+.add-underline {
+  text-decoration: underline;
+}
+
 .box-info-wrap .purpose .right {
   font-weight: 400;
 }

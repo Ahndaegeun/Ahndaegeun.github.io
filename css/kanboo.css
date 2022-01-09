@@ -1,25 +1,53 @@
 main {
-  display: flex;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
 }
 
-section {
-  width: 45%;
+.img-wrap {
+  height: 70%;
+  position: relative;
+}
+
+.img-wrap img {
+  position: absolute;
+  width: 100%;
   height: 100%;
-  border: 1px solid #999;
+  z-index: 1;
 }
 
-nav {
-  width: 10%;
-  padding: 10px;
+.img-wrap .top-img {z-index: 10;}
+
+.fa {
+  color: #fff;
 }
 
-.code-wrap {
+[class$=-btn] {
+  position: absolute;
+  z-index: 999;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  top: 50%;
+  font-size: 2em;
 }
 
-.preview-wrap {
+.prev-btn {
+  left: 10px;
 }
 
-.CodeMirror {
-  height: 100%;
+.next-btn {
+  right: 10px;
 }
+
+.impression {
+  height: 30%;
+  padding: 20px;
+}
+
+.impression ul li {
+  line-height: 1.5;
+}
+

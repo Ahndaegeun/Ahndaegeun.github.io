@@ -4,9 +4,97 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DDIT_BOARD</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/kanboo.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  
+  <main>
+
+    <div class="img-wrap">
+      <button class="prev-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      <img src="../storage/images/ddit_board_img/1.png" alt="preview" class="show-img top-img">
+      <img src="../storage/images/ddit_board_img/2.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/3.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/4.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/5.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/6.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/7.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/8.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/9.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/10.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/11.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/12.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/13.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/14.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/15.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/16.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/17.png" alt="preview" class="show-img">
+      <img src="../storage/images/ddit_board_img/18.png" alt="preview" class="show-img">
+      <button class="next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="impression">
+      <ul>
+        <li>역할</li>
+        <li>PL(Project Leader)</li>
+        <li>소감</li>
+        <li>
+          프로그래밍을 시작하고 처음 시작한 웹 프로젝트로 기대와 두려움이 많은 프로젝트 였습니다.
+          아직 구조적으로 이해도 하지 못했고 웹 동작방식을 잘 모르는 상황에서 시작했지만 그 덕분에 문제를 해결하는
+          능력이 상되었습니다. 문제를 직면했을때 당황하지 않고 해결방법을 고민하고 탐구하며 쉽게 포기하지 않는 힘을 기를 수
+          있게 해준 좋은 프로젝트였습니다.
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+
+<script>
+const imgs = document.querySelectorAll(".show-img")
+const prevBtn = document.querySelector(".prev-btn")
+const nextBtn = document.querySelector(".next-btn")
+
+const movePrevImg = e => {
+  let prevImg
+  for(i = 0; i < imgs.length; i++) {
+    const ele = imgs[i]
+    if(ele.classList.contains("top-img")) {
+      let position = i - 1
+      if(position < 0) {
+        position = 17
+      }
+      prevImg = imgs[position]
+    }
+    ele.classList.remove("top-img")
+  }
+  prevImg.classList.add("top-img")
+}
+
+const moveNextImg = e => {
+  let nextImg
+  for(i = 0; i < imgs.length; i++) {
+    const ele = imgs[i]
+    if(ele.classList.contains("top-img")) {
+      let position = i + 1
+      if(position > 17) {
+        position = 0
+      }
+      nextImg = imgs[position]
+    }
+    ele.classList.remove("top-img")
+  }
+  nextImg.classList.add("top-img")
+}
+
+prevBtn.addEventListener("click", e => {
+  movePrevImg(e)
+})
+nextBtn.addEventListener("click", e => {
+  moveNextImg(e)
+})
+</script>
 </body>
 </html>

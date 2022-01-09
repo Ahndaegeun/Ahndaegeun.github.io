@@ -4,41 +4,99 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>KANBOO</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" type="text/css" href="../codemirror-5.65.0/lib/codemirror.css">
   <link rel="stylesheet" href="../css/kanboo.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <main>
 
-    <nav>
-      <ul>
-        <li>File Name</li>
-        <li class="compiler-file">Compiler.java</li>
-      </ul>
-    </nav>
-    
-    <section class="code-wrap">
-      <textarea class="code">sdfsd</textarea>
-    </section>
-    
-    <section class="preview-wrap">
-      
-    </section>
-    
-  </main>
-  
-  
-  <script type="text/javascript" src="../codemirror-5.65.0/lib/codemirror.js"></script>
-  <script src="../storage/json/kanboo.js"></script>
-  <script>
-    const code = document.querySelector(".code")
-    code.innerHTML = kanboo.compiler
-    const editor = CodeMirror.fromTextArea(code, {
-      lineNumbers : true
-    })
+    <div class="img-wrap">
+      <button class="prev-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      <img src="../storage/images/kanboo_img/1.png" alt="preview" class="show-img top-img">
+      <img src="../storage/images/kanboo_img/2.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/3.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/4.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/5.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/6.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/7.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/8.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/9.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/10.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/11.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/12.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/13.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/14.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/15.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/16.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/17.png" alt="preview" class="show-img">
+      <img src="../storage/images/kanboo_img/18.png" alt="preview" class="show-img">
+      <button class="next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
 
-  </script>
+    <div class="impression">
+      <ul>
+        <li>역할</li>
+        <li>PL(Project Leader)</li>
+        <li>소감</li>
+        <li>
+          Spring boot, JPA, Vue.js를 사용하면서 지금까지 진행해 왔던 프로젝트와 다른 구조를 경험하고 새로운 기술을 
+          배워서 적용을 하는데 큰 의미가 있는 프로젝트 였습니다.
+          이 전의 프로젝트부터 계속 해오던 PL이였지만 그때와 다르게 새로 배워서 처음 시도하는 기술들이였고 
+          그렇기에 부담이 많이 있었던것도 사실이였지만 같이 노력해준 팀원들이 있기에 프로젝트를 잘 마무리 할 수 있었습니다.
+          이 프로젝트를 진행하면서 스프링의 구조적인 부분을 조금 더 알게 되었고, 최근 사용률이 증가하고있는 SPA의 이해도와 REST API의 구조에
+          대해 조금더 이해 할 수 있는 시간이였습니다.
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+
+<script>
+const imgs = document.querySelectorAll(".show-img")
+const prevBtn = document.querySelector(".prev-btn")
+const nextBtn = document.querySelector(".next-btn")
+
+const movePrevImg = e => {
+  let prevImg
+  for(i = 0; i < imgs.length; i++) {
+    const ele = imgs[i]
+    if(ele.classList.contains("top-img")) {
+      let position = i - 1
+      if(position < 0) {
+        position = 17
+      }
+      prevImg = imgs[position]
+    }
+    ele.classList.remove("top-img")
+  }
+  prevImg.classList.add("top-img")
+}
+
+const moveNextImg = e => {
+  let nextImg
+  for(i = 0; i < imgs.length; i++) {
+    const ele = imgs[i]
+    if(ele.classList.contains("top-img")) {
+      let position = i + 1
+      if(position > 17) {
+        position = 0
+      }
+      nextImg = imgs[position]
+    }
+    ele.classList.remove("top-img")
+  }
+  nextImg.classList.add("top-img")
+}
+
+prevBtn.addEventListener("click", e => {
+  movePrevImg(e)
+})
+nextBtn.addEventListener("click", e => {
+  moveNextImg(e)
+})
+</script>
 </body>
 </html>
