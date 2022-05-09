@@ -1,1 +1,14 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="./reset.css"><link rel="icon" href="/favicon.ico"><title>qosk</title><script defer="defer" src="/js/chunk-vendors.586ecfb3.js"></script><script defer="defer" src="/js/app.00f10b95.js"></script><link href="/css/app.7dab9d38.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but qosk doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><link rel="stylesheet" href="./reset.css"><link rel="icon" href="/favicon.ico"><title>qosk</title><script>document.documentElement.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      }, false);
+
+      let lastTouchEnd = 0;
+
+      document.documentElement.addEventListener('touchend', function (event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        } lastTouchEnd = now;
+      }, false);</script><script defer="defer" src="/js/chunk-vendors.90698524.js"></script><script defer="defer" src="/js/app.21a8c217.js"></script><link href="/css/app.989b4300.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but qosk doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
