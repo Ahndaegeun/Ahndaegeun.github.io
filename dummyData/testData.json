@@ -39,15 +39,17 @@
         ]
       },
       {
-        "image": "img/latte.png",
-        "title": "라떼",
-        "price": 3000,
-        "totalPrice": 3000,
+        "image": "img/americano.png",
+        "title": "헤이즐넛 아메리카노",
+        "price": 2500,
+        "totalPrice": 2500,
+        "count": 1,
         "option": [
           {
             "name": ["hot", "ice"],
             "type": "temperature",
-            "price": 0
+            "price": 0,
+            "value": 0
           },
           {
             "name": "샷추가",
@@ -72,15 +74,17 @@
         ]
       },
       {
-        "image": "img/cafeMocha.png",
-        "title": "카페모카",
-        "price": 3500,
-        "totalPrice": 3500,
+        "image": "img/latte.png",
+        "title": "라떼",
+        "price": 3000,
+        "totalPrice": 3000,
+        "count": 1,
         "option": [
           {
             "name": ["hot", "ice"],
             "type": "temperature",
-            "price": 0
+            "price": 0,
+            "value": 0
           },
           {
             "name": "샷추가",
@@ -109,11 +113,13 @@
         "title": "카푸치노",
         "price": 3000,
         "totalPrice": 3000,
+        "count": 1,
         "option": [
           {
             "name": ["hot", "ice"],
             "type": "temperature",
-            "price": 0
+            "price": 0,
+            "value": 0
           },
           {
             "name": "샷추가",
@@ -138,15 +144,17 @@
         ]
       },
       {
-        "image": "img/americano.png",
-        "title": "헤이즐넛 아메리카노",
-        "price": 2500,
-        "totalPrice": 2500,
+        "image": "img/cafeMocha.png",
+        "title": "카페모카",
+        "price": 3500,
+        "totalPrice": 3500,
+        "count": 1,
         "option": [
           {
             "name": ["hot", "ice"],
             "type": "temperature",
-            "price": 0
+            "price": 0,
+            "value": 0
           },
           {
             "name": "샷추가",
@@ -181,11 +189,13 @@
         "title": "카모마일",
         "price": 1500,
         "totalPrice": 1500,
+        "count": 1,
         "option": [
           {
             "name": ["hot", "ice"],
             "type": "temperature",
-            "price": 0
+            "price": 0,
+            "value": 0
           }
         ]
       },
@@ -194,11 +204,13 @@
         "title": "페퍼민트",
         "price": 1500,
         "totalPrice": 1500,
+        "count": 1,
         "option": [
           {
             "name": ["hot", "ice"],
             "type": "temperature",
-            "price": 0
+            "price": 0,
+            "value": 0
           }
         ]
       }
@@ -209,32 +221,79 @@
     "class": "",
     "item": [
       {
+        "image": "img/chamomile.png",
+        "title": "카모마일",
+        "price": 1500,
+        "totalPrice": 1500,
+        "count": 1,
+        "option": [
+          {
+            "name": ["hot", "ice"],
+            "type": "temperature",
+            "price": 0,
+            "value": 0
+          }
+        ]
+      },
+      {
         "image": "img/juice.png",
         "title": "딸기주스",
         "price": 2000,
         "totalPrice": 2000,
-        "option": []
+        "count": 1,
+        "option": [
+          {
+            "name": ["ice"],
+            "type": "temperature",
+            "price": 0,
+            "value": 0
+          }
+        ]
       },
       {
         "image": "img/applemint.png",
         "title": "애플민트 에이드",
         "price": 2500,
         "totalPrice": 2500,
-        "option": []
+        "count": 1,
+        "option": [
+          {
+            "name": ["ice"],
+            "type": "temperature",
+            "price": 0,
+            "value": 0
+          }
+        ]
       },
       {
         "image": "img/lemonade.png",
         "title": "허니레몬 에이드",
         "price": 3500,
         "totalPrice": 3500,
-        "option": []
+        "count": 1,
+        "option": [
+          {
+            "name": ["ice"],
+            "type": "temperature",
+            "price": 0,
+            "value": 0
+          }
+        ]
       },
       {
         "image": "img/yogurt.png",
         "title": "요거트 시리얼",
         "price": 3000,
         "totalPrice": 3000,
-        "option": []
+        "count": 1,
+        "option": [
+          {
+            "name": ["ice"],
+            "type": "temperature",
+            "price": 0,
+            "value": 0
+          }
+        ]
       }
     ]
   },
@@ -244,21 +303,30 @@
     "item": [
       {
         "image": "img/chamomile.png",
-        "title": "모카빵",
-        "price": 3000,
-        "totalPrice": 3000,
-        "option": []
+        "title": "카모마일",
+        "price": 1500,
+        "totalPrice": 1500,
+        "count": 1,
+        "option": [
+          {
+            "name": ["hot", "ice"],
+            "type": "temperature",
+            "price": 0,
+            "value": 0
+          }
+        ]
       },
       {
         "image": "img/peppermint.png",
-        "title": "베이글",
-        "price": 2500,
-        "totalPrice": 2500,
+        "title": "페퍼민트",
+        "price": 1500,
+        "totalPrice": 1500,
+        "count": 1,
         "option": [
           {
-            "name": "크림치즈",
-            "price": 500,
-            "type": "button",
+            "name": ["hot", "ice"],
+            "type": "temperature",
+            "price": 0,
             "value": 0
           }
         ]
